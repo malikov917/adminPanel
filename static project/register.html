@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Créer un compte client | AppsPro+</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- bootstrap datepicker -->
+  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="plugins/iCheck/all.css">
+  <!-- Bootstrap Color Picker -->
+  <link rel="stylesheet" href="plugins/colorpicker/bootstrap-colorpicker.min.css">
+  <!-- Bootstrap time Picker -->
+  <link rel="stylesheet" href="plugins/timepicker/bootstrap-timepicker.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="plugins/select2/select2.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini" >
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+          <img src="dist/img/0.png"  alt="User Image">
+      </a>
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Admin Panel</p>
+          <!-- Status -->
+          <a href="#"><i class="fa fa-circle text-success"></i> Admin</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu">
+        <li class="header">HEADER</li>
+        <!-- Optionally, you can add icons to the links -->
+        <li class="active"><a href=""><i class="fa fa-edit"></i> <span>Créer un compte client</span></a></li> <!-- Создать учетную запись -->
+        <li><a href="liste-des-clients.html"><i class="fa fa-list"></i> <span>Liste des clients</span></a></li> <!-- Список клиентов -->
+        <!--<li><a href="gestion_des_builds.html"><i class="fa fa-file-text-o"></i> <span>Gestion des builds</span></a></li>  Управление строит -->
+		<li><a href="#"><i class="fa fa-book"></i> <span>FAQ</span></a></li> <!-- FAQ -->
+      </ul>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        CREATION D'UN COMPTE CLIENT
+        <small>AppsPro+</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
+        <li><a href="#">Créer un compte client</a></li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <form action=http://ec2-107-23-233-200.compute-1.amazonaws.com:8000/create_shop method="post" onsubmit="return checkForm(this);">
+
+            <div class="row">
+            <div class="col-md-12">
+            <ul class="timeline">
+                <!-- timeline time label -->
+                <li class="time-label">
+                    <span class="bg-orange">
+                        Input your Informations personnelles
+                    </span>
+                </li>
+                <li class="time-label">
+                    <i class="fa fa-user bg-orange"></i>
+                    <div class="timeline-item">
+                        <div class="col-md-6">
+                        <!-- general form elements -->
+                        <div class="box box-primary ">
+                            <div class="box-header with-border">
+                            <h3 class="box-title">Informations personnelles</h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <!-- form start -->
+
+                            <div class="box-body">
+                                <div class="form-group">
+                                <label for="inputName">Nom * </label> <!-- Фамилия -->
+                                <input type="text" class="form-control" id="inputName"  name="inputName" placeholder="Nom">
+                                </div>
+                                <div class="form-group">
+                                <label for="inputSurName">Prénom *</label> <!-- Имя -->
+                                <input type="text" class="form-control" id="inputSurName" name="inputSurName" placeholder="Prénom">
+                                </div>
+                                <div class="form-group">
+                                <label for="inputAddress">Email address *</label> <!-- email -->
+                                <input type="email" class="form-control" id="inputAddress" name="inputAddress" placeholder="Enter email">
+                                </div>
+                                <div class="form-group">
+                                <label for="inputTel">Téléphone *</label> <!-- телефон -->
+                                <input type="number" class="form-control" id="inputTel" name="inputTel" placeholder="Téléphone">
+                                </div>
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="time-label">
+                    <span class="bg-purple">
+                        Input Société
+                    </span>
+                </li>
+
+                <li class="time-label">
+                    <i class="fa fa-user bg-purple"></i>
+                    <div class="timeline-item">
+                        <div class="col-md-6">
+                            <!-- general form elements -->
+                            <div class="box box-primary">
+                                <div class="box-header with-border">
+                                <h3 class="box-title">Société</h3>
+                                </div>
+                                <!-- /.box-header -->
+                                <!-- form start -->
+                                <div class="box-body">
+                                    <div class="form-group">
+                                    <label for="inputCompany">Société</label> <!-- Компания -->
+                                    <input type="text" class="form-control" id="inputCompany" name="inputCompany" placeholder="Société">
+                                    </div>
+									<div class="form-group">
+                                    <label for="inputSecEmail">Email for notifications</label><small> *For order from client</small><!-- Компания -->
+                                    <input type="text" class="form-control" id="inputSecEmail" name="inputSecEmail" placeholder="Email for notification">
+                                    </div>
+                                    <div class="form-group">
+                                    <label for="inputCompanyAddress">Adresse</label> <!-- Адр -->
+                                    <textarea class="form-control" rows="3" name="inputCompanyAddress" placeholder="Adresse ..." style="margin-top: 0px; margin-bottom: 0px; height: 74px;"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                    <label for="inputPostIndex">Code Postal *</label> <!-- Почтовый Индекс -->
+                                    <input type="text" class="form-control" id="inputPostIndex" name="inputPostIndex" placeholder="Code Postal">
+                                    </div>
+                                    <div class="form-group">
+                                    <label for="inputCity">Ville *</label> <!-- Город -->
+                                    <input type="text" class="form-control" id="inputCity" name="inputCity" placeholder="Ville">
+                                    </div>
+                                    <div class="form-group">
+                                    <label for="inputActivityArea">Secteur d'activité *</label> <!-- Область магазина -->
+									<input type="text" class="form-control" id="inputActivityArea" name="inputActivityArea" placeholder="ActivityArea">
+                                    </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+
+                <li class="time-label">
+                    <span class="bg-green">
+                        Input application information
+                    </span>
+                </li>
+
+                <li class="time-label">
+                    <i class="fa fa-user bg-green"></i>
+                    <div class="timeline-item">
+                        <div class="col-md-6">
+                        <!-- general form elements -->
+                                            <div class="box box-primary">
+                        <div class="box-header with-border">
+                        <h3 class="box-title">Application</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <!-- form start -->
+                        <div class="box-body">
+                            <div class="form-group">
+                            <label for="inputAppName">Nom *</label><small>Name of your future application</small> <!-- Название приложени -->
+                            <input type="text" class="form-control" id="inputAppName" name="inputAppName" placeholder="Nom">
+                            </div>
+                            <div class="form-group">
+                            <label for="inputDescription">Description *</label> <!-- Описание магазина -->
+                            <textarea class="form-control" name="inputDescription" rows="3" placeholder="Description ..." style="margin-top: 0px; margin-bottom: 0px; height: 74px;"></textarea>
+                            </div>
+                            <div class="form-group">
+                            <label for="inputLoginName">Identifiant *</label><small>Unique name by which you would go to the admin panel </small> <!-- Название приложени -->
+                            <input type="text" class="form-control" id="inputLoginName" name="inputLoginName" placeholder="AppLogin">
+                            </div>
+							<div class="form-group">
+                            <label for="inputPassword">Password *</label> <!-- Пароль -->
+                            <input type="password" class="form-control" id="inputPassword" name ="inputPassword" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                            <label for="inputPasswordAccept">Mot de passe *</label> <!-- Подтверждение пароля -->
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="exampleInputPassword1" placeholder="Mot de passe">
+                            </div>
+							<div class="form-group">
+                            <label for="inputCallCatalog">Choose how catalog will be called *</label><small>Example: Catalog, Products, Menu ... </small><!-- Оплата -->
+                            <input type="text" class="form-control" id="inputCallCatalog" name="inputCallCatalog" placeholder="Catalog, Products or Menu">
+                            </div>
+							<div class="form-group">
+                            <label for="shareText">Text to share via every phone app to friends *</label><small>Example: That's really good place for take a cup of a... </small><!-- Оплата -->
+                            <input type="text" class="form-control" id="shareText" name="shareText" placeholder="Text to share via every phone app to friends">
+                            </div>
+                            <div class="form-group">
+                                <p class="help-block">Upload ICON of your Application. Please, make sure you have 4:4 high quality logo. </p>
+                                <div class="add_file">
+                                                    <input id="inp2" type='file'></div>
+                                                        <input type="hidden" name="inputLogo" id="imgdata2">
+                                                            <p id="b65"></p>
+                                                            <img id="img2" width="30%">
+                                                                <script>
+                                                                    function readFile() {
+                                                                        if (this.files && this.files[0]) {
+                                                                            var FR= new FileReader();
+                                                                            FR.onload = function(e) {
+                                                                                document.getElementById("img2").src       = e.target.result;
+                                                                                document.getElementById("imgdata2").value = e.target.result;
+                                                                                };
+                                                                            FR.readAsDataURL( this.files[0] );
+                                                                        }
+                                                                    }
+
+                                                            document.getElementById("inp2").addEventListener("change", readFile, false);
+                                                        </script>
+
+                                                    </div>
+                            <div class="form-group">
+                                <p class="help-block">Upload BACKGROUND of your Application. Please, make sure you have have high quality 16:9 image. </p>
+                                <div class="add_file">
+                                                    <input id="inp2" type='file'></div>
+                                                        <input type="hidden" name="inputLogo" id="imgdata2">
+                                                            <p id="b65" ></p>
+                                                            <img id="img2" width="30%">
+                                                                <script>
+                                                                    function readFile() {
+                                                                        if (this.files && this.files[0]) {
+                                                                            var FR= new FileReader();
+                                                                            FR.onload = function(e) {
+                                                                                document.getElementById("img2").src       = e.target.result;
+                                                                                document.getElementById("imgdata2").value = e.target.result;
+                                                                                };
+                                                                            FR.readAsDataURL( this.files[0] );
+                                                                        }
+                                                                    }
+
+                                                            document.getElementById("inp2").addEventListener("change", readFile, false);
+                                                        </script>
+
+                                                    </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="time-label">
+                    <span class="bg-yellow">
+                        Choose design template
+                    </span>
+                </li>
+
+                <!-- /.timeline-label -->
+                <!-- timeline item -->
+                <li>
+                <i class="fa fa-user bg-yellow"></i>
+                <div class="timeline-item">
+                    <div class="col-md-3">
+                    <!-- Widget: user widget style 1 -->
+                    <div class="box box-widget widget-user">
+                        <!-- Add the bg color to the header using any of the bg-* classes -->
+                        <div class="widget-user-header bg-white" style="background: url('dist/img/design1.jpg') no-repeat scroll center top; height: 250px">
+                        </div>
+                        <div class="">
+                        <div class="row" style="margin-left: 35%">
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="design" id="design1" value="design1" checked>
+                                CHOOSE
+                            </label>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                        </div>
+                    </div>
+                    <!-- /.widget-user -->
+                    </div>
+					<div class="col-md-3">
+                    <!-- Widget: user widget style 1 -->
+                    <div class="box box-widget widget-user">
+                        <!-- Add the bg color to the header using any of the bg-* classes -->
+                        <div class="widget-user-header bg-white" style="background: url('dist/img/design2.jpg') no-repeat scroll center top; height: 250px">
+                        </div>
+                        <div class="">
+                        <div class="row" style="margin-left: 35%">
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="design" id="design2" value="design2" checked>
+                                CHOOSE
+                            </label>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                        </div>
+                    </div>
+                    <!-- /.widget-user -->
+                    </div>
+					<div class="col-md-3">
+                    <!-- Widget: user widget style 1 -->
+                    <div class="box box-widget widget-user">
+                        <!-- Add the bg color to the header using any of the bg-* classes -->
+                        <div class="widget-user-header bg-white" style="background: url('dist/img/design3.jpg') no-repeat scroll center top; height: 250px">
+                        </div>
+                        <div class="">
+                        <div class="row" style="margin-left: 35%">
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="design" id="design3" value="design3" checked>
+                                CHOOSE
+                            </label>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                        </div>
+                    </div>
+                    <!-- /.widget-user -->
+                    </div>
+					<div class="col-md-3">
+                    <!-- Widget: user widget style 1 -->
+                    <div class="box box-widget widget-user">
+                        <!-- Add the bg color to the header using any of the bg-* classes -->
+                        <div class="widget-user-header bg-white" style="background: url('dist/img/design4.jpg') no-repeat scroll center top; height: 250px">
+                        </div>
+                        <div class="">
+                        <div class="row" style="margin-left: 35%">
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="design" id="design4" value="design4" checked>
+                                CHOOSE
+                            </label>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                        </div>
+                    </div>
+                    <!-- /.widget-user -->
+                    </div>
+                </div>
+                </li>
+
+
+                <!-- END timeline item -->
+                <li class="time-label">
+					<span class="bg-blue">
+						Choose color template
+					</span>
+                </li>
+                <!-- timeline item -->
+                <li>
+                <i class="fa fa-user bg-blue"></i>
+                <div class="timeline-item">
+                    <div class="col-md-3">
+                    <!-- Widget: user widget style 1 -->
+                    <div class="box box-widget widget-user ">
+                        <!-- Add the bg color to the header using any of the bg-* classes -->
+                        <div class="widget-user-header bg-white" style="background: url('dist/img/palette1.png') no-repeat scroll center top; height: 250px">
+                        </div>
+                        <div class="">
+                        <div class="row" style="margin-left: 35%">
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="color" id="palette1" value="palette1" checked>
+                                CHOOSE
+                            </label>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                        </div>
+                    </div>
+                    <!-- /.widget-user -->
+                    </div>
+					<div class="col-md-3">
+                    <!-- Widget: user widget style 1 -->
+                    <div class="box box-widget widget-user ">
+                        <!-- Add the bg color to the header using any of the bg-* classes -->
+                        <div class="widget-user-header bg-white" style="background: url('dist/img/palette2.png') no-repeat scroll center top; height: 250px">
+                        </div>
+                        <div class="">
+                        <div class="row" style="margin-left: 35%">
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="color" id="palette2" value="palette2" checked>
+                                CHOOSE
+                            </label>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                        </div>
+                    </div>
+                    <!-- /.widget-user -->
+                    </div>
+					<div class="col-md-3">
+                    <!-- Widget: user widget style 1 -->
+                    <div class="box box-widget widget-user ">
+                        <!-- Add the bg color to the header using any of the bg-* classes -->
+                        <div class="widget-user-header bg-white" style="background: url('dist/img/palette3.png') no-repeat scroll center top; height: 250px">
+                        </div>
+                        <div class="">
+                        <div class="row" style="margin-left: 35%">
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="color" id="palette3" value="palette3" checked>
+                                CHOOSE
+                            </label>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                        </div>
+                    </div>
+                    <!-- /.widget-user -->
+                    </div>
+					<div class="col-md-3">
+                    <!-- Widget: user widget style 1 -->
+                    <div class="box box-widget widget-user ">
+                        <!-- Add the bg color to the header using any of the bg-* classes -->
+                        <div class="widget-user-header bg-white" style="background: url('dist/img/palette4.png') no-repeat scroll center top; height: 250px">
+                        </div>
+                        <div class="">
+                        <div class="row" style="margin-left: 35%">
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="color" id="palette4" value="palette4" checked>
+                                CHOOSE
+                            </label>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                        </div>
+                    </div>
+                    <!-- /.widget-user -->
+                    </div>
+					<div class="col-md-3">
+                    <!-- Widget: user widget style 1 -->
+                    <div class="box box-widget widget-user ">
+                        <!-- Add the bg color to the header using any of the bg-* classes -->
+                        <div class="widget-user-header bg-white" style="background: url('dist/img/palette5.png') no-repeat scroll center top; height: 250px">
+                        </div>
+                        <div class="">
+                        <div class="row" style="margin-left: 35%">
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="color" id="palette5" value="palette5" checked>
+                                CHOOSE
+                            </label>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                        </div>
+                    </div>
+                    <!-- /.widget-user -->
+                    </div>
+                </div>
+
+				                <!-- END timeline item -->
+                <li class="time-label">
+					<span class="bg-red">
+						Choose icon pack template
+					</span>
+                </li>
+                <!-- timeline item -->
+                <li>
+                <i class="fa fa-user bg-red"></i>
+                <div class="timeline-item">
+                    <div class="col-md-3">
+                    <!-- Widget: user widget style 1 -->
+                    <div class="box box-widget widget-user ">
+                        <!-- Add the bg color to the header using any of the bg-* classes -->
+                        <div class="widget-user-header bg-white" style="background: url('dist/img/icon1.png') no-repeat scroll center top; height: 250px">
+                        </div>
+                        <div class="">
+                        <div class="row" style="margin-left: 35%">
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="icon" id="icon1" value="icon1" checked>
+                                CHOOSE
+                            </label>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                        </div>
+                    </div>
+                    <!-- /.widget-user -->
+                    </div>
+					                    <div class="col-md-3">
+                    <!-- Widget: user widget style 1 -->
+                    <div class="box box-widget widget-user ">
+                        <!-- Add the bg color to the header using any of the bg-* classes -->
+                        <div class="widget-user-header bg-white" style="background: url('dist/img/icon2.png') no-repeat scroll center top; height: 250px">
+                        </div>
+                        <div class="">
+                        <div class="row" style="margin-left: 35%">
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="icon" id="icon2" value="icon2" checked>
+                                CHOOSE
+                            </label>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                        </div>
+                    </div>
+                    <!-- /.widget-user -->
+                    </div>
+					                    <div class="col-md-3">
+                    <!-- Widget: user widget style 1 -->
+                    <div class="box box-widget widget-user ">
+                        <!-- Add the bg color to the header using any of the bg-* classes -->
+                        <div class="widget-user-header bg-white" style="background: url('dist/img/icon3.png') no-repeat scroll center top; height: 250px">
+                        </div>
+                        <div class="">
+                        <div class="row" style="margin-left: 35%">
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="icon" id="icon3" value="icon3" checked>
+                                CHOOSE
+                            </label>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                        </div>
+                    </div>
+                    <!-- /.widget-user -->
+                    </div>
+                </div>
+                </li>
+                <li>
+                <i class="fa fa-user bg-aqua"></i>
+
+                <div class="timeline-item">
+                    <h3 class="timeline-header no-border"><a>Well done!</a> Accept your design</h3>
+                    <div class="timeline-footer">
+                    <div class="box-footer">
+                            <input type="submit" id="btnSubmit" class="btn btn-lg btn-success"></input>
+                            </div>
+                    </div>
+                </div>
+                </li>
+                <li>
+                <i class="fa fa-thumbs-o-up bg-gray"></i>
+                </li>
+            </ul>
+            </div>
+        </div>
+
+
+
+        </form>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <!-- Main Footer -->
+	<footer class="main-footer">
+    <strong>Copyright © 2017 <a>APPS PRO +</a>.</strong> All rights reserved.
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- Select2 -->
+<script src="plugins/select2/select2.full.min.js"></script>
+<!-- InputMask -->
+<script src="plugins/input-mask/jquery.inputmask.js"></script>
+<script src="plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<!-- date-range-picker -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap datepicker -->
+<script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+<!-- iCheck 1.0.1 -->
+<script src="plugins/iCheck/icheck.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- Page script -->
+<script>
+  $(function () {
+    //Initialize Select2 Elements
+    $(".select2").select2();
+
+    //Datemask dd/mm/yyyy
+    $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
+    //Datemask2 mm/dd/yyyy
+    $("#datemask2").inputmask("mm/dd/yyyy", {"placeholder": "mm/dd/yyyy"});
+    //Money Euro
+    $("[data-mask]").inputmask();
+
+    //Date range picker
+    $('#reservation').daterangepicker();
+    //Date range picker with time picker
+    $('#reservationtime').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A'});
+    //Date range as a button
+    $('#daterange-btn').daterangepicker(
+        {
+          ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+          },
+          startDate: moment().subtract(29, 'days'),
+          endDate: moment()
+        },
+        function (start, end) {
+          $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        }
+    );
+
+    //Date picker
+    $('#datepicker').datepicker({
+      autoclose: true
+    });
+
+    //iCheck for checkbox and radio inputs
+    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+      checkboxClass: 'icheckbox_minimal-blue',
+      radioClass: 'iradio_minimal-blue'
+    });
+    //Red color scheme for iCheck
+    $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+      checkboxClass: 'icheckbox_minimal-red',
+      radioClass: 'iradio_minimal-red'
+    });
+    //Flat red color scheme for iCheck
+    $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+      checkboxClass: 'icheckbox_flat-green',
+      radioClass: 'iradio_flat-green'
+    });
+
+    //Colorpicker
+    $(".my-colorpicker1").colorpicker();
+    //color picker with addon
+    $(".my-colorpicker2").colorpicker();
+
+    //Timepicker
+    $(".timepicker").timepicker({
+      showInputs: false
+    });
+  });
+</script>
+<script type="text/javascript">
+
+  function checkForm(form)
+  {
+    if(form.inputName.value == "") {
+      alert("Error: Username cannot be blank!");
+      form.inputName.focus();
+      return false;
+    }
+	if(form.inputSurName.value == "") {
+      alert("Error: SurName cannot be blank!");
+      form.inputSurName.focus();
+      return false;
+    }
+	if(form.inputAddress.value == "") {
+      alert("Error: Address cannot be blank!");
+      form.inputAddress.focus();
+      return false;
+    }
+	if(form.inputTel.value == "") {
+      alert("Error: Telephone cannot be blank!");
+      form.inputTel.focus();
+      return false;
+    }
+/*	if(form.inputPostIndex.value == "") {
+      alert("Error: PostIndex cannot be blank!");
+      form.inputPostIndex.focus();
+      return false;
+    }*/
+	if(form.inputCity.value == "") {
+      alert("Error: Ville cannot be blank!");
+      form.inputCity.focus();
+      return false;
+    }
+	if(form.inputActivityArea.value == "") {
+      alert("Error: ActivityArea cannot be blank!");
+      form.inputActivityArea.focus();
+      return false;
+    }
+	if(form.inputAppName.value == "") {
+      alert("Error: AppName cannot be blank!");
+      form.inputAppName.focus();
+      return false;
+    }
+	if(form.inputCallCatalog.value == "") {
+      alert("Error: Name Of Catalog cannot be blank!");
+      form.inputCallCatalog.focus();
+      return false;
+    }
+	if(form.shareText.value == "") {
+      alert("Error: Text to share via social apps cannot be blank!");
+      form.shareText.focus();
+      return false;
+    }
+
+	if(form.inputDescription.value == "") {
+      alert("Error: Description cannot be blank!");
+      form.inputDescription.focus();
+      return false;
+    }
+      if(form.inputLoginName.value == "") {
+          alert("Error: LoginName cannot be blank!");
+          form.inputLoginName.focus();
+          return false;
+      }
+    re = /^\w+$/;
+    if(!re.test(form.inputName.value)) {
+      alert("Error: Username must contain only letters, numbers and underscores!");
+      form.inputName.focus();
+      return false;
+    }
+
+    if(form.inputPassword.value != "" && form.inputPassword.value == form.exampleInputPassword1.value) {
+      if(form.inputPassword.value.length < 6) {
+        alert("Error: Password must contain at least six characters!");
+        form.inputPassword.focus();
+        return false;
+      }
+      if(form.inputPassword.value == form.username.value) {
+        alert("Error: Password must be different from Username!");
+        form.inputPassword.focus();
+        return false;
+      }
+      /*re = /[0-9]/;
+      if(!re.test(form.inputPassword.value)) {
+        alert("Error: password must contain at least one number (0-9)!");
+        form.inputPassword.focus();
+        return false;
+      }
+      re = /[a-z]/;
+      if(!re.test(form.inputPassword.value)) {
+        alert("Error: password must contain at least one lowercase letter (a-z)!");
+        form.inputPassword.focus();
+        return false;
+      }
+      re = /[A-Z]/;
+      if(!re.test(form.inputPassword.value)) {
+        alert("Error: password must contain at least one uppercase letter (A-Z)!");
+        form.inputPassword.focus();
+        return false;
+      }*/
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.inputPassword.focus();
+      return false;
+    }
+
+    alert("You entered a valid password: " + form.inputPassword.value);
+    return true;
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<table id="example1" class="table table-bordered table-hover dataTable table-striped">
+  <thead>
+  <tr>
+    <th>Login</th><th>Nom</th><th>Prenom</th><th>Email</th><th>Telephone</th><th>AppName</th><th>Android</th><th>iOS</th><th>Web Site</th><th>Edit</th><th>Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of items">
+    <td>{{item.title}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.surname}}</td>
+    <td>{{item.email}}</td>
+    <td>{{item.tel}}</td>
+    <td>{{item.store}}</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td><a href="register.html" data-toggle="tooltip" title="" class="tooltips" data-original-title="Edit" ><i class="fa fa-pencil"></i></a></td>
+    <td><a href="#" data-toggle="tooltip" title="" class="delete-row tooltips" data-original-title="Delete"><i class="fa fa-trash-o"></i></a></td>
+  </tr>
+  </tbody>
+  <tfoot>
+  <tr>
+    <th>Login</th><th>Nom</th><th>Prenom</th><th>Email</th><th>Telephone</th><th>AppName</th><th>Android</th><th>iOS</th><th>Web Site</th><th>Edit</th><th>Delete</th>
+  </tr>
+  </tfoot>
+</table>
