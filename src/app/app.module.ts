@@ -5,12 +5,13 @@ import { ListClientsComponent } from './list-clients/list-clients.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {HttpModule} from "@angular/http";
 import {FormsModule} from "@angular/forms";
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListClientsComponent,
-
+    RegistrationComponent,
   ],
   imports: [
     BrowserModule,
